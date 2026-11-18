@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 440" width="100%" height="100%">
+  <defs>
+    <!-- Background Ambient Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#0369a1" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0b1329" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Chrome Cylinder Gradient (Stem) -->
+    <linearGradient id="chromeStem" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="12%" stop-color="#475569" />
+      <stop offset="28%" stop-color="#cbd5e1" />
+      <stop offset="38%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="72%" stop-color="#38bdf8" />
+      <stop offset="85%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Titanium Blue Metallic Heat Treatment Gradient -->
+    <linearGradient id="titaniumFlare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="25%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#ffffff" />
+      <stop offset="65%" stop-color="#6366f1" />
+      <stop offset="85%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Valve Seat 45 deg Bevel Gradient (Machined Steel) -->
+    <linearGradient id="seatBevel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="20%" stop-color="#e2e8f0" />
+      <stop offset="35%" stop-color="#ffffff" />
+      <stop offset="55%" stop-color="#cbd5e1" />
+      <stop offset="75%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- Valve Disc Face Bottom -->
+    <radialGradient id="discFace" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#0284c7" />
+      <stop offset="75%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+
+    <!-- Specular Highlight Gleam Filter -->
+    <filter id="softGleam" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light Backdrop Halo -->
+  <ellipse cx="160" cy="240" rx="140" ry="170" fill="url(#ambientGlow)" />
+
+  <!-- Outer Precision Technical Guides (Subtle & Elegant) -->
+  <circle cx="160" cy="240" r="145" fill="none" stroke="#0284c7" stroke-width="1" stroke-dasharray="8 6" stroke-opacity="0.25" />
+  <circle cx="160" cy="240" r="158" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.15" />
+
+  <!-- ==================== REALISTIC ENGINE VALVE ASSEMBLY ==================== -->
+  <g id="valveAssembly" transform="translate(0, 0)">
+    
+    <!-- 1. STEM TIP (Hardened Cap & Chamfer) -->
+    <path d="M 148,22 L 172,22 L 174,28 L 146,28 Z" fill="#64748b" />
+    <line x1="148" y1="23" x2="172" y2="23" stroke="#ffffff" stroke-width="1" stroke-opacity="0.8" />
+
+    <!-- 2. KEEPER GROOVES (Alur Kuku Klep) -->
+    <!-- Groove 1 -->
+    <rect x="146" y="32" width="28" height="4.5" rx="1.5" fill="#0f172a" stroke="#334155" stroke-width="0.5" />
+    <line x1="148" y1="33" x2="172" y2="33" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.7" />
+
+    <!-- Groove 2 -->
+    <rect x="146" y="42" width="28" height="4.5" rx="1.5" fill="#0f172a" stroke="#334155" stroke-width="0.5" />
+    <line x1="148" y1="43" x2="172" y2="43" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.7" />
+
+    <!-- Groove 3 -->
+    <rect x="146" y="52" width="28" height="4.5" rx="1.5" fill="#0f172a" stroke="#334155" stroke-width="0.5" />
+    <line x1="148" y1="53" x2="172" y2="53" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.7" />
+
+    <!-- 3. MAIN VALVE STEM (Batang Katup Mesin Chrome Presisi) -->
+    <rect x="147" y="60" width="26" height="195" rx="2" fill="url(#chromeStem)" />
+    
+    <!-- Specular Highlight Line on Stem (Refleksi Kilap Logam) -->
+    <line x1="156" y1="62" x2="156" y2="255" stroke="#ffffff" stroke-width="1.8" stroke-opacity="0.9" />
+    <line x1="166" y1="62" x2="166" y2="255" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+
+    <!-- 4. VALVE FILLET TRANSITION (Leher Katup Melengkung / Titanium Heat Treatment) -->
+    <path d="M 147,250 
+             C 147,285 110,315 55,330 
+             L 50,342 
+             L 270,342 
+             L 265,330 
+             C 210,315 173,285 173,250 
+             Z" 
+          fill="url(#titaniumFlare)" />
+
+    <!-- Fillet Metallic Curved Reflection Highlight -->
+    <path d="M 155,250 
+             C 155,282 125,310 75,325" 
+          fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.7" />
+
+    <!-- Secondary Cyan Hue Highlight -->
+    <path d="M 165,250 
+             C 165,282 195,310 245,325" 
+          fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.6" />
+
+    <!-- 5. 45-DEGREE MACHINED VALVE SEAT (Bidang Sudut Kontak Presisi 45°) -->
+    <path d="M 50,342 
+             L 45,356 
+             L 275,356 
+             L 270,342 
+             Z" 
+          fill="url(#seatBevel)" />
+
+    <!-- Sharp Contact Margin Edge -->
+    <line x1="48" y1="343" x2="272" y2="343" stroke="#ffffff" stroke-width="1" stroke-opacity="0.9" />
+    <line x1="45" y1="356" x2="275" y2="356" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.6" />
+
+    <!-- 6. VALVE HEAD MARGIN & BOTTOM DISC (Payung Katup / Piringan Bawah) -->
+    <!-- Head Disc Lip -->
+    <path d="M 45,356 
+             C 45,372 96,382 160,382 
+             C 224,382 275,372 275,356 
+             L 275,353 
+             C 275,368 224,378 160,378 
+             C 96,378 45,368 45,353 
+             Z" 
+          fill="#cbd5e1" />
+
+    <!-- Recessed Combustion Chamber Disc Dome -->
+    <ellipse cx="160" cy="365" rx="108" ry="14" fill="url(#discFace)" stroke="#38bdf8" stroke-width="1.2" />
+    <ellipse cx="160" cy="365" rx="70" ry="8" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="6 3" />
+    
+    <!-- Central Dimple / Machining Center Mark -->
+    <circle cx="160" cy="365" r="4.5" fill="#38bdf8" filter="url(#softGleam)" />
+    <circle cx="160" cy="365" r="1.5" fill="#ffffff" />
+
+    <!-- Dynamic Light Sparkle (Refleksi Kilau Nyata) -->
+    <g transform="translate(155, 110)">
+      <circle cx="0" cy="0" r="3" fill="#ffffff" filter="url(#softGleam)" />
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#ffffff" stroke-width="1" stroke-opacity="0.9" />
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#ffffff" stroke-width="1" stroke-opacity="0.9" />
+    </g>
+
+    <g transform="translate(90, 335)">
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" filter="url(#softGleam)" />
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.8" />
+      <line x1="0" y1="-6" x2="0" y2="6" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.8" />
+    </g>
+  </g>
+</svg>

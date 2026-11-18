@@ -1,0 +1,55 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="valveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="55%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient glow -->
+  <circle cx="100" cy="100" r="95" fill="url(#glowGradient)"/>
+
+  <!-- Retainer / spring clip at top -->
+  <rect x="82" y="18" width="36" height="10" rx="3" fill="url(#valveGradient)"/>
+  <rect x="88" y="10" width="24" height="10" rx="3" fill="url(#valveGradient)"/>
+
+  <!-- Valve stem (batang panjang) -->
+  <rect x="93" y="26" width="14" height="98" fill="url(#valveGradient)" filter="url(#softGlow)"/>
+
+  <!-- Spring coil di sekitar stem (kesan mesin) -->
+  <g stroke="#5eead4" stroke-width="3" fill="none" opacity="0.7">
+    <ellipse cx="100" cy="45" rx="20" ry="6"/>
+    <ellipse cx="100" cy="58" rx="20" ry="6"/>
+    <ellipse cx="100" cy="71" rx="20" ry="6"/>
+    <ellipse cx="100" cy="84" rx="20" ry="6"/>
+  </g>
+
+  <!-- Valve head (kepala jamur, melebar ke bawah) -->
+  <path d="M 100 116
+           C 60 116, 30 140, 24 172
+           C 24 180, 30 184, 40 180
+           C 55 160, 78 148, 100 148
+           C 122 148, 145 160, 160 180
+           C 170 184, 176 180, 176 172
+           C 170 140, 140 116, 100 116 Z"
+        fill="url(#valveGradient)" filter="url(#softGlow)"/>
+
+  <!-- Garis highlight di kepala valve -->
+  <path d="M 100 128 C 75 128, 52 142, 42 165"
+        stroke="#f0fdfa" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Sealing edge bawah -->
+  <ellipse cx="100" cy="180" rx="78" ry="8" fill="none" stroke="url(#valveGradient)" stroke-width="4" opacity="0.6"/>
+</svg>
